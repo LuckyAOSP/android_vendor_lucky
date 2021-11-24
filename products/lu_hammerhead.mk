@@ -13,19 +13,19 @@
 # limitations under the License.
 
 # Inherit Unlegacy Android common configuration
-$(call inherit-product, vendor/unlegacy/configs/common.mk)
+$(call inherit-product, vendor/lucky/configs/common.mk)
 
 # Inherit AOSP device configuration
-$(call inherit-product, device/asus/tilapia/aosp_tilapia.mk)
+$(call inherit-product, device/lge/hammerhead/aosp_hammerhead.mk)
 
-PRODUCT_NAME   := ua_tilapia
-PRODUCT_DEVICE := tilapia
+PRODUCT_NAME   := lu_hammerhead
+PRODUCT_DEVICE := hammerhead
 PRODUCT_BRAND  := google
-PRODUCT_MODEL  := Nexus 7
-PRODUCT_MANUFACTURER := Asus
+PRODUCT_MODEL  := Nexus 5
+PRODUCT_MANUFACTURER := LGE
 
-# Device Fingerprint
+# Device build info and fingerprint
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=nakasig \
-    BUILD_FINGERPRINT="google/nakasig/tilapia:5.1/LMY47D/1743759:user/release-keys" \
-    PRIVATE_BUILD_DESC="nakasig-user 5.1 LMY47D 1743759 release-keys"
+    PRODUCT_NAME=hammerhead \
+    BUILD_FINGERPRINT="google/hammerhead/hammerhead:6.0.1/M4B30X/3237893:user/release-keys" \
+    PRIVATE_BUILD_DESC="hammerhead-user 6.0.1 M4B30X 3237893 release-keys"

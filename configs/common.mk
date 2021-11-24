@@ -1,4 +1,5 @@
-# Copyright (C) 2016 Unlegacy Android
+# Copyright (C) 2016 lucky Android
+# Copyright (C) 2021 LuckyAOSP
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,11 +14,11 @@
 # limitations under the License.
 
 # Include our needed policies
-include vendor/unlegacy/sepolicy/sepolicy.mk
+include vendor/lucky/sepolicy/sepolicy.mk
 
 # World APN list
 PRODUCT_COPY_FILES += \
-    vendor/unlegacy/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
+    vendor/lucky/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
 
 # Google property overides
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -35,11 +36,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Backup services whitelist
 PRODUCT_COPY_FILES += \
-    vendor/unlegacy/configs/permissions/backup.xml:system/etc/sysconfig/backup.xml
+    vendor/lucky/configs/permissions/backup.xml:system/etc/sysconfig/backup.xml
 
 # Include overlays
 PRODUCT_PACKAGE_OVERLAYS += \
-    vendor/unlegacy/overlay/common
+    vendor/lucky/overlay/common
 
 # Common packages
 PRODUCT_PACKAGES += \

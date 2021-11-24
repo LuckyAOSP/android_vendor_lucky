@@ -1,4 +1,5 @@
 # Copyright (C) 2017 Unlegacy-Android
+# Copyright (C) 2021 LuckyAOSP
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,15 +16,15 @@
 # -----------------------------------------------------------------
 # UA OTA update package
 
-UA_TARGET_PACKAGE := $(TARGET_PRODUCT)
+LU_TARGET_PACKAGE := $(TARGET_PRODUCT)
 ifeq ($(TARGET_BUILD_TYPE),debug)
-  UA_TARGET_PACKAGE := $(UA_TARGET_PACKAGE)_debug
+  LU_TARGET_PACKAGE := $(LU_TARGET_PACKAGE)_debug
 endif
 
-UA_TARGET_PACKAGE := $(PRODUCT_OUT)/$(UA_TARGET_PACKAGE)-$(PLATFORM_VERSION)-$(shell date -u +%Y%m%d).zip
+LU_TARGET_PACKAGE := $(PRODUCT_OUT)/$(LU_TARGET_PACKAGE)-$(PLATFORM_VERSION)-$(shell date -u +%Y%m%d).zip
 
 .PHONY: otapackage
 otapackage: $(INTERNAL_OTA_PACKAGE_TARGET)
-	@echo "Package UA-OTA: $(UA_TARGET_PACKAGE)"
-	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(UA_TARGET_PACKAGE)
-	$(hide) $(MD5SUM) $(UA_TARGET_PACKAGE) | cut -d ' ' -f1 > $(UA_TARGET_PACKAGE).md5sum
+	@echo "Package UA-OTA: $(LU_TARGET_PACKAGE)"
+	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(LU_TARGET_PACKAGE)
+	$(hide) $(MD5SUM) $(LU_TARGET_PACKAGE) | cut -d ' ' -f1 > $(LU_TARGET_PACKAGE).md5sum

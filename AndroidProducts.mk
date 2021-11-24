@@ -1,4 +1,5 @@
 # Copyright (C) 2016 Unlegacy Android
+# Copyright (C) 2021 LuckyAOSP
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,20 +14,5 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/products/ua_a2109.mk \
-    $(LOCAL_DIR)/products/ua_acclaim.mk \
-    $(LOCAL_DIR)/products/ua_deb.mk \
-    $(LOCAL_DIR)/products/ua_espresso.mk \
-    $(LOCAL_DIR)/products/ua_espresso3g.mk \
-    $(LOCAL_DIR)/products/ua_flo.mk \
-    $(LOCAL_DIR)/products/ua_flounder.mk \
-    $(LOCAL_DIR)/products/ua_flounder_lte.mk \
-    $(LOCAL_DIR)/products/ua_grouper.mk \
-    $(LOCAL_DIR)/products/ua_hummingbird.mk \
-    $(LOCAL_DIR)/products/ua_hammerhead.mk \
-    $(LOCAL_DIR)/products/ua_mako.mk \
-    $(LOCAL_DIR)/products/ua_ovation.mk \
-    $(LOCAL_DIR)/products/ua_picasso2.mk \
-    $(LOCAL_DIR)/products/ua_tilapia.mk \
-    $(LOCAL_DIR)/products/ua_transformer.mk \
-    $(LOCAL_DIR)/products/ua_tuna.mk
+    $(LOCAL_DIR)/products/lu_hammerhead.mk
+
