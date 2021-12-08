@@ -57,7 +57,7 @@ echo "z$target" | grep -q "-"
             lunch $target
         else
             # This is probably just the UA model name
-            lunch ua_$target-userdebug
+            lunch lu_$target-userdebug
         fi
 fi
 return $?
